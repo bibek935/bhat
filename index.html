@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whac-A-Mole</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        
+        <h1>🔨 Whac-A-Mole! </h1>
+
+        <div class="instructions">
+            <h3>How to Play</h3>
+            <p>1. Select the **Mole Visibility Time**.</p>
+            <p>2. Click **Start Game**.</p>
+            <p>3. Click the **mole** whenever it appears!</p>
+            <p>4. The game lasts for **30 seconds**.</p>
+        </div>
+
+        <div class="header-panel">
+            <div class="score-display">Score: <span id="score">0</span></div>
+            <div class="timer-display">Time Left: <span id="time-left">30</span>s</div>
+        </div>
+
+        <div class="controls-panel">
+            <label for="visibility-time">Mole Visibility Time:</label>
+            <select id="visibility-time">
+                <option value="1000">1.0 second</option>
+                <option value="800">0.8 seconds</option>
+                <option value="600">0.6 seconds</option>
+                <option value="400">0.4 seconds</option>
+            </select>
+            <button id="start-button">Start Game</button>
+        </div>
+
+        <div class="grid">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+    </div>
+
+    <audio id="hit-sound" src="hit.mp3" preload="auto"></audio>
+
+    <script src="game.js"></script>
+</body>
+</html>

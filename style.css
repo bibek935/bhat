@@ -1,0 +1,87 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Instructions Styling */
+.instructions {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.instructions p {
+    margin: 5px 0;
+}
+
+/* Header Panel for Score/Timer */
+.header-panel {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Controls Panel */
+.controls-panel {
+    margin-bottom: 20px;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* 3 columns, 100px wide */
+    grid-template-rows: repeat(3, 100px);    /* 3 rows, 100px high */
+    gap: 10px;
+    margin: 0 auto;
+    background-color: #58a25c; /* Grass/dirt background */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Individual Cell Styling */
+.cell {
+    background-color: #9c6644; /* Hole/ground color */
+    border-radius: 50%; /* Makes the 'hole' look round */
+    position: relative;
+    overflow: hidden; /* Important for the mole animation */
+    cursor: url('hammer.cur'), pointer; /* Custom cursor idea */
+}
+
+/* The Mole Image Styling */
+.cell.mole-visible {
+    /* Use your custom image here (mole.png) */
+    background-image: url('mole.png'); 
+    background-size: 80%; /* Adjust size as needed */
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    /* Optional: Add a simple animation to make it 'pop' up */
+    animation: pop-up 0.1s ease-out forwards;
+}
+
+/* Keyframe for a simple pop-up animation */
+@keyframes pop-up {
+    0% { transform: scale(0.8) translateY(100%); }
+    100% { transform: scale(1) translateY(0); }
+}
+
+/* Styling for the Start Button */
+#start-button:disabled {
+    background-color: #ccc;
+}

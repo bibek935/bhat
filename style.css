@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #eb1f1f;
 }
 
 .game-container {
@@ -50,7 +50,7 @@ body {
     grid-template-rows: repeat(3, 100px);    /* 3 rows, 100px high */
     gap: 10px;
     margin: 0 auto;
-    background-color: #58a25c; /* Grass/dirt background */
+    background-color: #4304f1; /* Grass/dirt background */
     padding: 10px;
     border-radius: 5px;
 }
